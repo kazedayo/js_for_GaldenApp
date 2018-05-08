@@ -5,18 +5,20 @@ function redrawImg(obj,img){
 	}).fadeIn(200);
 }
 
-$(window).scroll(function(){
-	var scrollTop = $(window).scrollTop();
-	var windowHeight = $(window).height();		
-	var first = false;
+$(window).scroll(function() {
 	$(".comment").each( function() {
-		var offset = $(this).offset();
-		if (scrollTop <= offset.top && ($(this).height() + offset.top) < (scrollTop + windowHeight) && first == false) {
-			$(this).addClass("read");
-			first=true;
-		} else {
-			$(this).removeClass("read");
-			first=false;
-		}
+		var top_of_element = $(this).offset().top;
+    	var bottom_of_element = $(this).offset().top + $(this).outerHeight();
+    	var bottom_of_screen = $(window).scrollTop() + window.innerHeight;
+    	var top_of_screen = $(window).scrollTop();
+
+    	if((bottom_of_screen > top_of_element) && (top_of_screen < bottom_of_element)){
+        	// The element is visible, do something
+        	$(this).addClass("read");
+    	}
+    	else {
+        	// The element is not visible, do something else
+        	$(this).removeClass("read");
+    	}
 	});
 });
