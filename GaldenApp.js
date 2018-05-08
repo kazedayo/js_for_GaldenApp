@@ -14,11 +14,11 @@ $(window).scroll(function() {
 
     	if((bottom_of_screen > top_of_element) && (top_of_screen < bottom_of_element)){
         	// The element is visible, do something
-        	$(this).addClass("read");
+        	$(this).addClass("showing");
     	}
     	else {
         	// The element is not visible, do something else
-        	$(this).removeClass("read");
+        	$(this).removeClass("showing");
     	}
 	});
 });
