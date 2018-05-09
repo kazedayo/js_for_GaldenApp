@@ -24,7 +24,7 @@ $(window).scroll(function() {
 });
 
 function getReadPosition(){
-    var id = $(".comment showing").first.id;
+    var id = $(".comment showing").first().id;
     console.log(id);
     return id;
 }
