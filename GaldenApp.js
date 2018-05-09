@@ -20,5 +20,5 @@ $(window).scroll(function() {
         	// The element is not visible, do something else
         	$(this).removeClass("showing");
     	}
-	});
-});
+	})
+})
