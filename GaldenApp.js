@@ -22,8 +22,3 @@ $(window).scroll(function() {
     	}
 	});
 });
-
-function getReadPosition(){
-    var id = $(".comment showing").first().attr('id');
-    console.log(id);
-}
