@@ -5,6 +5,11 @@ function redrawImg(obj,img){
 	}).fadeIn(200);
 }
 
+function getReadPosition(){
+    var id = $(".comment showing").first().attr('id');
+    console.log(id);
+}
+
 $(window).scroll(function() {
 	$(".comment").each( function() {
 		var top_of_element = $(this).offset().top;
@@ -21,9 +26,4 @@ $(window).scroll(function() {
         	$(this).removeClass("showing");
     	}
 	});
-})
-
-function getReadPosition(){
-    var id = $(".comment showing").first().attr('id');
-    console.log(id);
-}
+});
