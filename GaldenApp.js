@@ -5,7 +5,7 @@ function redrawImg(obj,img){
 	}).fadeIn(200);
 }
 
-$(window).show(function() {
+$(window).ready(function() {
     $(".comment").each( function() {
         var top_of_element = $(this).offset().top;
         var bottom_of_element = $(this).offset().top + $(this).outerHeight();
