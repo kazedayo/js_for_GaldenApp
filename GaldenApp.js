@@ -21,7 +21,7 @@ $(window).scroll(function() {
         	$(this).removeClass("showing");
     	}
 	});
-});
+})
 
 function getReadPosition(){
     var id = $(".comment showing").first().attr('id');
