@@ -6,7 +6,7 @@ function redrawImg(obj,img){
 }
 
 $(document).ready(function() {
-    var bLazy = new Blazy();
+    var myLazyLoad = new LazyLoad();
 });
 
 $(window).scroll(function() {
