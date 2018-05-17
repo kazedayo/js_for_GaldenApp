@@ -5,10 +5,6 @@ function redrawImg(obj,img){
 	}).fadeIn(200);
 }
 
-$(document).ready(function() {
-    var myLazyLoad = new LazyLoad();
-});
-
 $(window).scroll(function() {
 	$(".comment").each( function() {
 		var top_of_element = $(this).offset().top;
