@@ -1,6 +1,8 @@
 function redrawImg(obj,img){
 	obj.fadeOut(200,function(){
-		obj.attr('src',img);
+		obj.attr('data-src',img);
+		obj.attr('class','b-lazy');
+		obj.attr('src','https://img.eservice-hk.net/upload/2018/05/17/213108_b95f899cf42b6a9472e11ab7f8c64f89.gif');
 		obj.attr('onclick', 'window.webkit.messageHandlers.imageView.postMessage(\''+img+'\')')
 	}).fadeIn(200);
 }
